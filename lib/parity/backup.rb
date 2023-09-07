@@ -49,7 +49,7 @@ module Parity
 
     def wipe_development_database
       Kernel.system(
-        "dropdb --if-exists #{development_db} && createdb #{development_db}",
+        "dropdb --if-exists #{development_db} --force && createdb #{development_db}",
       )
     end
 
